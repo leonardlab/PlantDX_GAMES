@@ -3,7 +3,7 @@
 This repository contains supporting code for the Plant-DX modeling work. More details coming soon regarding how to set up and conduct a test run of the code to produce results plots for the base case model fit.
 ___________________________________________________________________________________________________________________________________________________________________
 
-Key information from GAMESv1.0 code release:
+Key information from GAMESv1.0 code release: <br />
 This code is associated with the [Dray, K.E. et al. ACS Synthetic Biology manuscript] (https://pubs.acs.org/doi/10.1021/acssynbio.1c00528) "GAMES: A dynamic model development workflow for rigorous characterization of synthetic genetic systems".*
 *please contact corresponding author J.N. Leonard for a copy of the manuscript if needed.
 
