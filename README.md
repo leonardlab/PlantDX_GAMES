@@ -1,4 +1,9 @@
-# COVID_Dx_GAMES
+# PlantDX_GAMES
+
+This repository contains supporting code for the Plant-DX modeling work. More details coming soon regarding how to set up and conduct a test run of the code to produce results plots for the base case model fit.
+
+____________________________________________________________________________________________________________________________________________________________________
+Outdated README info from COVID-Dx repo:
 
 This code is associated with Chapter 3 of Kate Dray's PhD thesis (Northwestern University, Chemical Engineering) and follows the GAMES conceptual workflow (Dray et al. (2022). ACS Synthetic Biology). Since the completeion of this code, the GAMES code has been significantly refactored; the code presented here uses v1.1 of the GAMES software package (along with Python 3.7). Other package requirements can be found in the documentatation for v1.1 on the GAMES code (can be found on the Leonard Lab GitHub account).
 
