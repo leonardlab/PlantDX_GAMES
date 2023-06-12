@@ -7,17 +7,14 @@ INITIAL SETUP ON YOUR DEVICE <br />
 1. install required packages with your preferred package manager (I recommend conda--i.e. anaconda or miniconda-- or pip): <br />
 -install with conda: <br />
 -install with pip: <br />
-<br />
 2. clone the repo with the http or ssh url (I recommend ssh but http is faster and does not require additional setup, although it requires logging into your github account): <br />
 -using the terminal (on macOS), cd into the directory in which you would like the repo to be cloned. To clone the repo into a directory with the *same* name as the repo, use one of the following options: <br />
 -clone with ssh: <br />
 -clone with http: <br />
 -To clone the repo into a directory with a *new* name, append the directory name to one of the above commands, e.g.: <br />
 git clone... <br />
-<br />
 3. make results folder: <br />
 4. update the required paths in the code files to make them executable on your machine: <br />
--
 
 #windows: <br />
 1.
@@ -25,11 +22,9 @@ git clone... <br />
 2.
 -
 3.
--
- <br />
- TEST RUNNING THE CODE: <br />
- 
+- <br />
 
+TEST RUNNING THE CODE: <br />
 
 ___________________________________________________________________________________________________________________________________________________________________
 
