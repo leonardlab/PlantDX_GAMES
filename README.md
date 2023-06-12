@@ -4,6 +4,9 @@ This repository contains supporting code for the Plant-DX modeling work. More de
 ___________________________________________________________________________________________________________________________________________________________________
 
 Key information from GAMESv1.0 code release:
+This code is associated with the [Dray, K.E. et al. ACS Synthetic Biology manuscript] (https://pubs.acs.org/doi/10.1021/acssynbio.1c00528) "GAMES: A dynamic model development workflow for rigorous characterization of synthetic genetic systems".*
+*please contact corresponding author J.N. Leonard for a copy of the manuscript if needed.
+
 Detailed descriptions of the files and functions in this repository are included in the Supplementary Information (Supplementary Notes 2-3) of the manuscript. Simulation outputs associated with the manuscript are included as Supplementary Data 1. Test.py and Run.py are the executable files. Settings.py can be used to change the settings for different simulation runs.
 
 After cloning the repository, the user must create a folder called "Results" - the code will automatically save all simulation outputs in this folder. The absolute file path for this folder must be updated in the file Saving.py. Absolute paths may also need to be provided when importing REFERENCE TRAINING DATA.py and paper.mplstyle.py.
