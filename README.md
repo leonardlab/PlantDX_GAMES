@@ -2,8 +2,8 @@
 
 This repository contains supporting code for the Plant-DX modeling work. More details coming soon regarding how to set up and conduct a test run of the code to produce results plots for the base case model fit.
 
-INITIAL SETUP ON YOUR DEVICE <br />
-#macOS: <br />
+##INITIAL SETUP ON YOUR DEVICE <br />
+###macOS: <br />
 1. install required packages with your preferred package manager (I recommend conda--i.e. anaconda or miniconda-- or pip): <br />
 -install with conda: <br />
 -install with pip: <br />
@@ -16,7 +16,7 @@ git clone... <br />
 3. make results folder: <br />
 4. update the required paths in the code files to make them executable on your machine: <br />
 
-#windows: <br />
+###windows: <br />
 1.
 -
 2.
@@ -24,7 +24,7 @@ git clone... <br />
 3.
 - <br />
 
-TEST RUNNING THE CODE: <br />
+##TEST RUNNING THE CODE: <br />
 
 ___________________________________________________________________________________________________________________________________________________________________
 
