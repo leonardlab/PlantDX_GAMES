@@ -10,7 +10,7 @@ this codebase is under construction to:
 
 ## INITIAL SETUP ON YOUR DEVICE <br />
 ### macOS: <br />
-1. install dependencies with your preferred package manager (I recommend conda--i.e. anaconda or miniconda-- or pip): <br />
+#### 1. install dependencies with your preferred package manager (I recommend conda--i.e. anaconda or miniconda-- or pip): <br />
 - dependencies: <br />
 python >=3.7 <br />
 lmfit >=0.9.14 <br />
@@ -23,25 +23,35 @@ scipy >=1.4 <br /> <br />
 conda install <package_name> <br /> <br />
 - install with pip: <br /> 
 pip install <package_name> <br />
-<br />
 
-2. clone the repo with the http or ssh url (I usually recommend ssh, but http* is easier and does not require additional setup): <br />
-- using the terminal (on macOS), cd into the directory in which you would like the repo to be cloned. To clone the repo into a directory with the *same* name as the repo, use one of the following options: <br /> <br />
-- clone with http**: git clone https://github.com/leonardlab/PlantDX_GAMES.git <br /> <br />
-*cloning with http requires that you login to your github account <br />
-**to clone with ssh, use the ssh url instead of the http url. <br />
-<br />
+#### 2. clone the repo with the http or ssh url <br />
+(I usually recommend ssh, but http* is easier and does not require additional setup): <br />
+- using the terminal (on macOS), cd into the directory in which you would like the repo to be cloned. To clone the repo into a directory with the *same* name as the repo use the following command (for http**):<br />
+git clone https://github.com/leonardlab/PlantDX_GAMES.git <br />
+##### *cloning with http requires that you login to your github account <br />
+##### **to clone with ssh, use the ssh url instead of the http url. <br />
 
-3. make results folder: <br />
+#### 3. make results folder: <br />
 in the directory of your local PlantDX_GAMES repo, make a new directory named "Results". Files from each run of the code will be saved there. <br />
  <br />
 
-4. update the required paths in the code files to make them executable on your machine: <br />
-The absolute file path for this folder must be updated in the file Saving.py.  <br /> Absolute paths may also need to be provided when importing REFERENCE TRAINING DATA.py and paper.mplstyle.py.
+#### 4. update the required paths in the code files to make them executable on your machine: <br />
+- Change ***results_folder_path*** to absolute path to results folder in: <br />
+-- Saving.py 
+- Change ***paper.mplstyle.py path*** to an absolute path in: <br />
+-- Analysis.py,<br />
+-- Run.py, <br />
+-- Test.py <br />
+- Change ***path_exp*** to correct absolute path in: <br />
+-- Settings.py<br />
+- Change ***num_cores*** to match the number of cores on your device in: <br />
+-- Run.py <br />
+-- each instance instance of ***mp.pool()*** in Run.py <br />
+#### * Absolute paths are **strongly** recommended for any instance of a path within the code. <br /> Run.py threw errors for me when running the code with relative paths in the past, so I recommend avoiding them if possible. * <br />
 <br />
 
 ### windows: <br />
-#### information based on GAMES v1.0 release: <br />
+#### (information based on GAMESv1.0.0 readme): <br />
 The parallelization component of this code was written using Python’s multiprocessing package, which has a different implementation on mac vs. windows OS. This code was run and tested on macOS and is *not* currently set up to support any other OS. <br />
 However, GAMES v1.0.1 code was successfully run on Linux, and on Windows *without* parallelization. <br /> If you are a Windows user, we recommend setting parallelization = ‘no’ on line XXX in Run.py to use a version of the code that does not use parallelization. However, this particular model is not well suited to run without parallelization and there is a chance it is not feasible for parameter estimation (module 2) or parameter identifiability analysis (module 3).
  <br />
