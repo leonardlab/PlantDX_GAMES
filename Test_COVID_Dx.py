@@ -61,21 +61,21 @@ def testSingleSet(p):
     createFolder('./' + sub_folder_name)
     os.chdir('./' + sub_folder_name)
     
-    doses, solutions, chi2, df_sim, df_all_states = solveAll(p, exp_data, 'all states')
+    doses, solutions, chi2, df_sim = solveAll(p, exp_data, '')
     R_sq = calcRsq(solutions, exp_data)  
     # parityPlot(solutions, exp_data, data)
     
     #Plot modeling objectives
-    # plotModelingObjectives123(solutions)
-    # plotModelingObjectives456(df_sim)
+    plotModelingObjectives123(solutions)
+    plotModelingObjectives456(df_sim)
 
     #Plot all model states ('ensemble' or 'slice')
-    plot_all_states(df_all_states, 'mid', 'slice', '2 hours')
-    plot_all_states(df_all_states, 'opt', 'slice', '2 hours')
+    # plot_all_states(df_all_states, 'mid', 'slice', '2 hours')
+    # plot_all_states(df_all_states, 'opt', 'slice', '2 hours')
 
     #Plot all states ODE RHS
-    plot_states_RHS(df_all_states, 'mid', 'slice', p, '2 hours')
-    plot_states_RHS(df_all_states, 'opt', 'slice', p, '2 hours')
+    # plot_states_RHS(df_all_states, 'mid', 'slice', p, '2 hours')
+    # plot_states_RHS(df_all_states, 'opt', 'slice', p, '2 hours')
     
     print('*******')
     print('R2: ' + str(np.round(R_sq, 3)))
