@@ -72,7 +72,7 @@ df_data = pd.read_pickle('/Users/kdreyer/Desktop/Github/COVID_Dx_GAMES/PROCESSED
 df_error = pd.read_pickle('/Users/kdreyer/Desktop/Github/COVID_Dx_GAMES/PROCESSED DATA ERR.pkl')
 
 #Set style file
-plt.style.use('/Users/kdreyer/Desktop/Github/COVID_Dx_GAMES/paper.mplstyle.py')
+plt.style.use('/Users/kdreyer/Desktop/Github/PlantDX_GAMES/paper.mplstyle.py')
 
 #ignore ODEint warnings that clog up the console
 warnings.filterwarnings("ignore")

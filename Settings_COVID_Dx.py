@@ -113,7 +113,7 @@ def init():
     conditions_dictionary['k_CV'] = 13 #starts at 1, not 0. Only relevant if data == 'cross-validation train' or data == 'cross-validation test'
     conditions_dictionary['k_PEM_evaluation'] = 3 #starts at 1, not 0. Only relevant if data == 'PEM evaluation'
     
-    conditions_dictionary["num_cores"] = 6
+    conditions_dictionary["num_cores"] = 8
     conditions_dictionary["num_datasets_pem_eval"] = 3
     full_path = makeMainDir(folder_name)
     conditions_dictionary["real_param_labels_free"] = real_param_labels_free

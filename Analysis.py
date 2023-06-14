@@ -32,8 +32,7 @@ df_data = pd.read_pickle('/Users/kate/Documents/GitHub/COVID_Dx_GAMES/PROCESSED 
 df_error = pd.read_pickle('/Users/kate/Documents/GitHub/COVID_Dx_GAMES/PROCESSED DATA ERR.pkl')
 
 #Import custom style file for plotting
-plt.style.use('/Users/kate/Documents/GitHub/COVID_Dx_GAMES/paper.mplstyle.py')
-    
+plt.style.use('/Users/kdreyer/Desktop/Github/PlantDX_GAMES/paper.mplstyle.py')    
 
 dpi_ = 600
 colors = ['teal', 'deeppink' ,'rebeccapurple', 'darkseagreen', 'darkorange', 'dimgrey', 

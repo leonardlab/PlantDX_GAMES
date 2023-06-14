@@ -5,10 +5,9 @@ This repository contains supporting code for the Plant-DX modeling work. More de
 ## PLANNED UPDATES <br />
 this codebase is under construction to:
 1. add an additional mechanism to the base case model, supported by data from the COVID-Dx system. <br />
-2. refactor the model code into GAMESv2.0.0 from GAMESv1.0.1.<br />
+2. refactor the model code into the GAMESv2.0.0 framework,  from the GAMESv1.0.1 framework. "COVID-Dx" will also be removed from all file names that contain it in this step.<br />
 
-
-## INITIAL SETUP ON YOUR DEVICE <br />
+## SETUP ON YOUR DEVICE <br />
 ### macOS: <br />
 #### 1. install dependencies with your preferred package manager (I recommend conda--i.e. anaconda or miniconda-- or pip): <br />
 - dependencies: <br />
@@ -18,37 +17,37 @@ matplotlib >=3.1.3 <br />
 numpy >=1.18.1 <br />
 pandas >=1.0.5 <br />
 salib >=1.3.8 <br />
-scipy >=1.4 <br /> <br />
+scipy >=1.4 <br />
 - install with conda: <br />
-conda install <package_name> <br /> <br />
+conda install <package_name> <br /> 
 - install with pip: <br /> 
 pip install <package_name> <br />
 
 #### 2. clone the repo with the http or ssh url <br />
 (I usually recommend ssh, but http* is easier and does not require additional setup): <br />
 - using the terminal (on macOS), cd into the directory in which you would like the repo to be cloned. To clone the repo into a directory with the *same* name as the repo use the following command (for http**):<br />
-git clone https://github.com/leonardlab/PlantDX_GAMES.git <br />
+**git clone https://github.com/leonardlab/PlantDX_GAMES.git** <br />
 ##### *cloning with http requires that you login to your github account <br />
 ##### **to clone with ssh, use the ssh url instead of the http url. <br />
 
 #### 3. make results folder: <br />
 in the directory of your local PlantDX_GAMES repo, make a new directory named "Results". Files from each run of the code will be saved there. <br />
- <br />
 
 #### 4. update the required paths in the code files to make them executable on your machine: <br />
-- Change ***results_folder_path*** to absolute path to results folder in: <br />
+- Change ***results_folder_path*** to correct absolute path to results folder in: <br />
 -- Saving.py 
-- Change ***paper.mplstyle.py path*** to an absolute path in: <br />
+- Change ***paper.mplstyle.py path*** to correct absolute path in: <br />
 -- Analysis.py,<br />
 -- Run.py, <br />
 -- Test.py <br />
 - Change ***path_exp*** to correct absolute path in: <br />
 -- Settings.py<br />
+- Change ***df_data*** and ***df_error*** paths to correct absolute paths in: <br />
+-- Run.py <br />
 - Change ***num_cores*** to match the number of cores on your device in: <br />
 -- Run.py <br />
 -- each instance instance of ***mp.pool()*** in Run.py <br />
-#### * Absolute paths are **strongly** recommended for any instance of a path within the code. <br /> Run.py threw errors for me when running the code with relative paths in the past, so I recommend avoiding them if possible. * <br />
-<br />
+##### Absolute paths are **strongly** recommended for any instance of a path within the code. <br /> Run.py threw errors for me when running the code with relative paths in the past, so I recommend avoiding them if possible.<br />
 
 ### windows: <br />
 #### (information based on GAMESv1.0.0 readme): <br />
@@ -57,7 +56,15 @@ However, GAMES v1.0.1 code was successfully run on Linux, and on Windows *withou
  <br />
 
 ## TEST RUNNING THE CODE: <br />
-### coming soon  <br />
+- update the following in ***Settings.py***:<br />
+-- folder_name <br />
+(will overwrite previous results if not updated each time before running)*<br />
+-- "run_type": leave as " " for module 0, "1" for module 1 etc., "12" for modules 1 & 2 etc., "123" for modules 1 & 2 & 3. Modules will run sequentially, not in parallel. <br />
+---module 0: test <br />
+---module 1: <br />
+---module 2: <br />
+---module 3: <br />
+
 ___________________________________________________________________________________________________________________________________________________________________
 
 Key information from GAMESv1.0 code release: <br />
