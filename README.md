@@ -1,6 +1,6 @@
 # PlantDX_GAMES
-
-This repository contains supporting code for the Plant-DX modeling work. See details below regarding how to setup the code and conduct a test run to produce plots of the modeling objectives for the base case Plant-Dx model, and fit/ comparison to a dataset from the COVID-Dx system. <br />
+This repository contains supporting code for the Plant-DX modeling work. This work utilizes the [Dray, et al. GAMES conceptual workflow](https://pubs.acs.org/doi/10.1021/acssynbio.1c00528), and is currently using the [GAMES v1.0.1 framework](https://github.com/leonardlab/GAMES). 
+See details below regarding how to setup the code and conduct a test run to produce plots of the modeling objectives for the base case Plant-Dx model, and fit/ comparison to a dataset from the COVID-Dx system. <br />
 
 ## PLANNED UPDATES <br />
 this codebase is under construction to:
@@ -47,7 +47,7 @@ in the directory of your local PlantDX_GAMES repo, make a new directory named "R
 - Change ***num_cores*** to match the number of cores on your device in: <br />
 -- Run.py <br />
 -- each instance instance of ***mp.pool()*** in Run.py <br />
-##### Absolute paths are **strongly** recommended for any instance of a path within the code. <br /> Run.py threw errors for me when running the code with relative paths in the past, so I recommend avoiding them if possible.<br />
+##### Absolute paths are **strongly** recommended for any instance of a path within the code. <br /> (Run.py threw errors for me when running the code with relative paths in the past, so I recommend avoiding them if possible.) <br />
 
 ### windows: <br />
 #### (information based on GAMESv1.0.0 readme): <br />
@@ -56,24 +56,23 @@ However, GAMES v1.0.1 code was successfully run on Linux, and on Windows *withou
  <br />
 
 ## TEST RUNNING THE CODE: <br />
-### update the following in ***Settings.py***:<br />
+### update the following in ***Settings.py***: <br />
 - folder_name <br />
-(will overwrite previous results if not updated each time before running)<br />
+(will overwrite previous results if not updated each time before running) <br />
 ### The code is now ready to run. <br />
 The test run will solve the model ODEs using the best fit parameters for fitting to a *slice* of the dataset from the high throughput experiment (from the COVID-Dx system). It will then plot each of the 6 modeling objectives, as described in the COVID-Dx manuscript *(in preparation)*. Plots and experimental summary metrics will be saved in the folder of the name <folder_name> (from above), which will be created within the Results directory you created in the code setup. <br />
-### To execute the test run, run the Test_COVID_Dx.py file. <br /><br />
+### To execute the test run, run the Test_COVID_Dx.py file.
 ______________________________________________________________________________
 
-<br />
-Key information from GAMESv1 code releases: <br />
-This code is associated with the [Dray, K.E. et al. ACS Synthetic Biology manuscript] (https://pubs.acs.org/doi/10.1021/acssynbio.1c00528) "GAMES: A dynamic model development workflow for rigorous characterization of synthetic genetic systems".*
+### Key information from GAMESv1 code releases: <br />
+[This code](https://github.com/leonardlab/GAMES) is associated with the [Dray, K.E. et al. ACS Synthetic Biology manuscript](https://pubs.acs.org/doi/10.1021/acssynbio.1c00528) 
+"GAMES: A dynamic model development workflow for rigorous characterization of synthetic genetic systems". 
 *please contact corresponding author J.N. Leonard for a copy of the manuscript if needed.
 
 Detailed descriptions of the files and functions in this repository are included in the Supplementary Information (Supplementary Notes 2-3) of the manuscript. Simulation outputs associated with the manuscript are included as Supplementary Data 1. Test.py and Run.py are the executable files. Settings.py can be used to change the settings for different simulation runs.
 
 RELEASE NOTE v1.0.1: The previous release of this code included an incorrect standard error value to define the error distribution used to randomly add noise to data points, leading to a slightly smaller error distribution. This new release uses the appropriate value, which will slightly impact some figures relating to generation of PEM evaluation data and calculation of PPL thresholds. To reproduce the figures exactly as in the manuscript, please use the initial release of the code (v1.0.0).
-<br /><br />
 ______________________________________________________________________________
-### Citation from COVID-Dx repo:
-This code is associated with Chapter 3 of Kate Dray's PhD thesis (Northwestern University, Chemical Engineering) and follows the GAMES conceptual workflow (Dray et al. (2022). ACS Synthetic Biology). 
-the code presented here uses v1.1 of the GAMES software package (along with Python 3.7). Other package requirements can be found in the documentatation for v1.1 on the GAMES code (can be found on the Leonard Lab GitHub account).
+### Citation from COVID-Dx private repository:
+This code is associated with Chapter 3 of Dr. Kate Dray's PhD thesis (Northwestern University, Chemical Engineering) and follows the [GAMES conceptual workflow](https://pubs.acs.org/doi/10.1021/acssynbio.1c00528).
+The code presented here uses v1.0.1 of the GAMES software package (along with Python 3.7). Other package requirements can be found in the documentatation for v1.0.1 on the GAMES code (or above).
