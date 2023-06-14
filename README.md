@@ -1,6 +1,6 @@
 # PlantDX_GAMES
 
-This repository contains supporting code for the Plant-DX modeling work. More details coming soon regarding how to conduct a test run of the code to produce results plots for the base case Plant-Dx model fit to a dataset from the COVID-Dx system. <br />
+This repository contains supporting code for the Plant-DX modeling work. See details below regarding how to setup the code and conduct a test run to produce plots of the modeling objectives for the base case Plant-Dx model, and fit/ comparison to a dataset from the COVID-Dx system. <br />
 
 ## PLANNED UPDATES <br />
 this codebase is under construction to:
